@@ -8,7 +8,10 @@ public class EmpWageProblem
 		int WagePerHr=20;
 		int HrsPerDay_fullTime=8;
 		int HrsPerDay_PartTime=4;
-		int DailyWageSalary;
+		int DailyWage;
+
+		int WorkingDaysPerMonth=20;
+		int MonthlyWage;
 
 		System.out.println("Welcome to Employee Wage Computation Program");
 
@@ -22,13 +25,17 @@ public class EmpWageProblem
 				break;
 			case 1:
 				System.out.println("FullTime Employee and he is present");
-				DailyWageSalary=WagePerHr*HrsPerDay_fullTime;
-				System.out.println("Salary : "+DailyWageSalary);
+				DailyWage=WagePerHr*HrsPerDay_fullTime;
+				System.out.println("Salary per day : "+DailyWage);
+				MonthlyWage=DailyWage*WorkingDaysPerMonth;
+				System.out.println("Salary for month : "+MonthlyWage);
 				break;
 			case 2:
 				System.out.println("Part Time Employee and he is present");
-				DailyWageSalary=WagePerHr*HrsPerDay_PartTime;
-				System.out.println("Salary : "+DailyWageSalary);
+				DailyWage=WagePerHr*HrsPerDay_PartTime;
+				System.out.println("Salary per Day : "+DailyWage);
+				MonthlyWage=DailyWage*WorkingDaysPerMonth;
+				System.out.println("Salary for month : "+MonthlyWage);
 				break;
 			default:
 				System.out.println("Invalid");
